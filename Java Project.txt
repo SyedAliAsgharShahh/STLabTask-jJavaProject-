@@ -1,0 +1,305 @@
+
+
+public class person {
+	//feild
+	String name;
+	int id;
+	String address;
+	String email;
+	long contact;
+	
+	//method of common atrribute
+	public void Setname(String name){
+	  this.name=name;
+	}
+  public String getname(){
+	  return name;
+	  
+  }
+public void Setid(int id){
+	 this.id=id;
+	}
+ public int getid(){
+	  
+	  return id;
+ }
+	void Setaddress(String address){
+		 this.address=address;
+	}
+ public String getaddress(){
+	  
+	  return address;
+	  
+ }
+	void setemail(String email){
+		 this.email=email;
+	}
+ public String getemail(){
+	  
+	  return email;
+ }
+	void setcontact(long contact){
+		 this.contact=contact;
+	}
+ public long getcontact(){
+	  
+	  return contact;
+ }
+ 
+}
+
+
+//customer
+import java.util.Scanner;
+public class costomer extends person{
+	//feild
+private int payment;
+private String order;
+
+    //method
+void setpayment(int payment){
+	this.payment=payment;
+	}
+int getpayment(){
+	return payment;
+	
+}
+
+void setorder(String order){
+	this.order=order;
+	}
+String getorder(){
+	return order;
+	
+}
+     //main
+public static void main (String []args) {
+
+costomer c1=new costomer();//construster
+
+Scanner scanner=new Scanner(System.in);
+
+
+System.out.println("Enter your name");
+String name=scanner.nextLine();
+c1.Setname(name);
+
+System.out.println("Enter your address");
+String address=scanner.nextLine();
+c1.Setaddress(address);
+
+
+System.out.println("Enter your email");
+String email=scanner.nextLine();
+c1.setemail(email);
+
+System.out.println("what you want to order");
+String order=scanner.nextLine();
+c1.setorder(order);
+
+
+
+System.out.println("pay your payment");
+int payment=scanner.nextInt();
+c1.setpayment(payment);
+
+System.out.println("Enter your id");
+int id=scanner.nextInt();
+c1.Setid(id);
+
+
+System.out.println("Enter your contact number");
+long contact=scanner.nextInt();
+c1.setcontact(contact);
+
+System.out.println("costomer name is =    "+c1.getname());
+System.out.println("costomer addresss is =    "+c1.getaddress());
+System.out.println("costomer email is =  "+c1.getemail());
+System.out.println("costomer oder the food is =   "+c1.getorder());
+System.out.println("costomer payment is =   "+c1.getpayment());
+System.out.println("costomer id is =    "+c1.getid());
+System.out.println("costomer contact number is =  "+c1.getcontact());
+}
+}
+
+//empolyee
+
+import java.util.Scanner;
+
+public class empolyee extends person {
+	int salary;
+	
+	public void Setsalary(int salary){
+		  this.salary=salary;
+		}
+	  public int getsalary(){
+		  return salary;
+		  
+	  }
+		  public static void main (String []args) {
+
+			  empolyee e1=new empolyee();
+			  Scanner scanner=new Scanner(System.in);
+
+
+			  
+			  System.out.println("Enter your name");
+			  String name=scanner.nextLine();
+			  e1.Setname(name);
+
+			  System.out.println("Enter your address");
+			  String address=scanner.nextLine();
+			  e1.Setaddress(address);
+
+
+			  System.out.println("Enter your email");
+			  String email=scanner.nextLine();
+			  e1.setemail(email);
+  
+			  System.out.println("Enter your id");
+			  int id=scanner.nextInt();
+			  e1.Setid(id);
+
+
+			  System.out.println("Enter your contact number");
+			  long contact=scanner.nextInt();
+			  e1.setcontact(contact);
+			  
+			  
+			  
+			  
+			  System.out.println("Enter your salary rs for withdraw");
+			  int salary=scanner.nextInt();
+			  e1.Setsalary(salary);
+			  
+			  
+			  System.out.println("empolyee name is =    "+e1.getname());
+			  System.out.println("empolyee address  is =    "+e1.getaddress());
+			  System.out.println("empolyee email is =    "+e1.getemail());
+			  System.out.println("empolyee id is =    "+e1.getid());
+			  System.out.println("empolyee contact is =    "+e1.getcontact());
+			  System.out.println("empolyee salary  is =    "+e1.getsalary());
+			 
+		  
+
+}}
+//room
+import java.util.Scanner;
+public class room{
+    
+    public static void main(String []args){
+        String name;
+        String num ;
+        String type;
+        long cinc;
+       
+        System.out.println("*******please enter 1 for vip room and 2 for local room  ***********");
+         
+         Scanner ab=new Scanner(System.in);
+        
+        int v=ab.nextInt();
+        
+       switch(v){
+       
+       case 1:
+    	   
+            System.out.printf("*************************%n it has 3 beds %n room price is 10,000  %n 2 beds room price is 6,000%n*************************");
+        break;
+        
+       case 2:
+        
+            System.out.printf("************************* %n it has 3 beds %n room price is 8,000 %n 2 beds room price is 4,000 %n *************************");
+        break;
+       }
+        System.out.printf("%n if you are intrusted to purchase room vip or local %n please give details of yourself for enter 3 for details  and otherwise press 4 for close");
+        
+        System.out.printf("%n Thanks for your cooperation %n*********************************************************************************  ");
+        
+        int c=ab.nextInt();
+        
+       switch (c){
+            
+       case 3:
+         System.out.println("please Fill the form completly. ");
+        
+        type=ab.nextLine();
+         System.out.println("please enter your name");
+         name=ab.nextLine();
+         System.out.println("please enter your number");
+         num=ab.nextLine();
+         System.out.println("please enter your cinc number");
+         cinc=ab.nextLong();
+         System.out.println("*****************************************************************************");
+         System.out.println(name+"  have a mobile number "+num+" and cinc "+cinc+" has purchase "+type+ " room  ");
+         break;
+       case 4:
+    	   break;
+    }
+       
+}}
+
+//food
+import java.util.Scanner;
+public class Food {
+				public static void main(String[] args){
+					System.out.println("Enter your Table no");
+					Scanner s2=new Scanner(System.in);
+				   int h=s2.nextInt();
+					System.out.println("Enter 1 for view food itmes");
+					System.out.println("Enter 2 for view drinks itmes");
+					int menu;
+					Scanner s1=new Scanner(System.in);
+					menu=s1.nextInt();
+					switch(menu)
+					{
+					case 1:
+						System.out.println("enter 1 for order Chicken 1 plate 100");
+						System.out.println("enter 2 foe order Chicken Bryani 1 plate 150");
+						System.out.println("enter 3 foe order Chicken Corma 1 plate 200");
+						System.out.println("enter 4 foe order Mutton Bryani 1 plate 220");
+						System.out.println("enter 5 foe order Mutton Corma 1 plate 300");
+						System.out.println("enter 6 foe order Simple Baryani 1 plate 100");
+						System.out.println("enter 7 foe order Chiken Karahi 1kg 1000");
+						System.out.println("enter 8 foe order Mutton larahi 1kg 1200");
+						Scanner c1=new Scanner(System.in);
+						int a=c1.nextInt();
+						if (a==1||a==2 ||a==3||a==4 ||a==5||a==6 ||a==7 ||a==8 ) {
+							System.out.println("Table no "+ h+"  your order is complete please wait ");
+						}
+						else {
+							System.out.println("you enter invalid number try again ");
+							
+						}
+						
+					case 2:
+						System.out.println("Enter 1 for order Drink coke (1 letter 70),(1.5 letter 90) and (2.25 letter 130");
+						System.out.println("Enter 2 for order Drink pepsi (1 letter 70),(1.5 letter 90) and (2.25 letter 130");
+						System.out.println("Enter 3 for order Drink gorma (1 letter 70),(1.5 letter 90) and (2.25 letter 130");
+						System.out.println("Enter 4 for order Drink 7up (1 letter 50),(1.5 letter 80) and (2.25 letter 130");
+						System.out.println("Enter 5 for order Drink string (1 letter 900),(1.5 letter 130) and (2.25 letter 170");
+						System.out.println("Enter 6 for order Drink mineral water (1 letter 50),(1.5 letter 70) and (2.25 letter 100");
+						Scanner d1=new Scanner(System.in);
+						int b=d1.nextInt();
+						if (b==1||b==2 ||b==3||b==4 ||b==5||b==6 ||b==7 ||b==8 ) {
+							System.out.println("Table no "+ h+" your order is complete ");
+							
+							}
+						else {
+							System.out.println("you enter invalid number try again ");
+							
+						}
+						
+						
+					break;
+					default:
+						System.out.println("you entered an invalid number please enter the correct number please");
+			
+					}
+		
+				
+				
+				 
+				
+				
+}}
+
